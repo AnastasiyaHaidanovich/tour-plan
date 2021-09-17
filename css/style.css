@@ -402,6 +402,8 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-menu__item {
@@ -595,6 +597,11 @@ template {
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
+}
+
+.rating-counter:after {
+  content: '5';
+  font-size: 0.8em;
 }
 
 @media (max-width: 1200px) {
