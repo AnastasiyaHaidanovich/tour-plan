@@ -391,7 +391,7 @@ template {
   background-color: #0A223D;
 }
 
-.navbar-menu {
+.navbar-menu__list {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
