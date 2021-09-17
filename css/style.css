@@ -479,6 +479,8 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -661,6 +663,29 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .hotel-info__name {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .hotel-info__text {
+    width: 100%;
+  }
+  .hotel-wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .rating {
+    display: none;
+  }
+  .offer {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .stars {
+    max-width: 60px;
   }
 }
 
