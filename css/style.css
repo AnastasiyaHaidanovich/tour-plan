@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Mulich', sans-serif;
+  font-family: 'Mulish', sans-serif;
   color: #333333;
   background-color: #F5FAFE;
 }
@@ -499,6 +499,101 @@ template {
 .breadcrumb-list__link {
   color: inherit;
   text-decoration: none;
+}
+
+.hotel {
+  padding-top: 23px;
+  padding-bottom: 70px;
+}
+
+.hotel-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hotel-info__name {
+  margin: 0 14px 0 0;
+}
+
+.hotel-name {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.hotel-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hotel-description {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
+}
+
+.stars {
+  margin-bottom: 4px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.offer {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 13px;
+  color: #ffffff;
+  padding: 4px 9px;
+  background-color: #EC1F46;
+  border-radius: 3px;
+}
+
+.rating {
+  min-height: 45px;
+  color: #ffffff;
+  padding: 4px 9px;
+  background-color: #EC1F46;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.rating-text {
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+}
+
+.rating-counter {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 @media (max-width: 1200px) {
