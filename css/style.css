@@ -612,6 +612,31 @@ template {
   position: relative;
 }
 
+.swiper-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 99;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.swiper__next {
+  right: 18px;
+  background-image: url(../img/arrow-right.svg);
+}
+
+.swiper__prev {
+  left: 18px;
+  background-image: url(../img/arrow-left.svg);
+}
+
 .swiper:after {
   content: '';
   position: absolute;
@@ -628,31 +653,6 @@ template {
 
 .slider {
   max-width: 728px;
-}
-
-.slider-button {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  z-index: 99;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-repeat-background-position: center;
-}
-
-.slider-button__next {
-  right: 18px;
-  background-image: url(../img/arrow-right.svg);
-}
-
-.slider-button__prev {
-  left: 18px;
-  background-image: url(../img/arrow-left.svg);
 }
 
 @media (max-width: 1200px) {
