@@ -816,7 +816,9 @@ template {
 .map {
   width: 347px;
   height: 213px;
-  background-color: darkgreen;
+}
+
+.map__content {
   border-radius: 10px;
 }
 
