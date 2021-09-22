@@ -1,8 +1,9 @@
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
-    autoheight: true,
-    watchOverflow: true,
+    effect: 'fade',
+    speed: 900,
+    touchEventsTarget: true,
 
     // Navigation arrows
     navigation: {
@@ -13,5 +14,5 @@ const swiper = new Swiper('.swiper', {
     keyboard: {
       enabled: true,
       onlyInViewport: false,
-    },
+    },    
   });
