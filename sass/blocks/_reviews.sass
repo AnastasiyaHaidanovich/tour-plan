@@ -1,0 +1,74 @@
+.reviews 
+    padding: 40px 0 70px
+    &-title 
+        font-weight: bold
+        font-size: 36px
+        line-height: 45px
+        text-align: center
+        text-transform: uppercase
+    &__heading 
+        margin-bottom: 70px
+    &-swiper
+        &__item 
+            max-width: 731px
+            margin: auto
+            background-color: white
+            margin-top: 45px
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding-bottom: 30px
+        &__button
+            position: absolute
+            width: 30px
+            height: 30px
+            background-color: transparent
+            border: none
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 99
+            cursor: pointer
+            background-repeat: no-repeat
+            background-position: center
+        &__next 
+            right: 18px
+            background-image: url(../img/reviews-arrow-right.svg)
+        &__prev 
+            left: 18px
+            background-image: url(../img/reviews-arrow-left.svg)
+    &__profile
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: -45px
+        margin-bottom: 32px
+    &__avatar 
+        width: 90px
+        height: 90px
+        border-radius: 50%
+        object-fit: cover
+        margin-bottom: 9px
+    &__username 
+        font-weight: bold
+        font-size: 12px
+        line-height: 15px
+        color: $primary
+        margin-bottom: 10px
+    &__date 
+        font-weight: normal
+        font-size: 10px
+        line-height: 13px
+        margin-bottom: 4px
+    &__marks 
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 48px
+    &__text 
+        width: 537px
+        margin: auto
+        font-weight: normal
+        font-size: 12px
+        line-height: 160%
+        text-align: justify
+        
