@@ -825,11 +825,11 @@ template {
   overflow: hidden;
 }
 
+.parallax-window {
+  background: transparent;
+}
+
 .newsletter {
-  background-image: url("../img/newsletter-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   padding: 98px 0 87px 0;
   position: relative;
 }
