@@ -1317,6 +1317,23 @@ template {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .packages-grid {
+    -ms-grid-columns: (48%)[2];
+        grid-template-columns: repeat(2, 48%);
+    -ms-grid-rows: (500px)[3];
+        grid-template-rows: repeat(3, 500px);
+    grid-gap: 35px;
+  }
+  .grid-package__image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .grid-package__image-large {
+    width: 100%;
+    height: 100%;
+  }
   .card {
     width: 230px;
   }
@@ -1377,6 +1394,14 @@ template {
   .card {
     width: 49%;
     height: 230px;
+  }
+}
+
+@media (max-width: 820px) {
+  .packages-grid {
+    -ms-grid-columns: (48%)[2];
+        grid-template-columns: repeat(2, 48%);
+    grid-gap: 20px;
   }
 }
 
@@ -1459,6 +1484,16 @@ template {
   .map__content {
     width: 100%;
   }
+  .grid-description__text {
+    font-size: 12px;
+  }
+  .grid-description__button {
+    right: 15px;
+  }
+  .hotel-about {
+    -ms-grid-columns: 20px 1fr;
+        grid-template-columns: 20px 1fr;
+  }
   .newsletter-wrapper {
     max-width: 576px;
     width: 92%;
@@ -1478,6 +1513,46 @@ template {
   }
   .reviews__text {
     max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-package:first-child {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 50% 50%;
+        grid-template-rows: 50% 50%;
+  }
+  .grid-package__image-large {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .grid-package__first {
+    -ms-grid-rows: 47px 95px 20px 35px;
+        grid-template-rows: 47px 95px 20px 35px;
+  }
+  .grid-package__offer-large {
+    font-size: 8px;
+    line-height: 10px;
+    padding: 4px 9px;
+  }
+  .grid-description__rating {
+    display: none;
+  }
+  .grid-description__text {
+    display: none;
+  }
+  .packages-grid {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (500px)[5];
+        grid-template-rows: repeat(5, 500px);
+  }
+  .packages-grid__first {
+    -ms-grid-column: 1;
+    grid-column: 1;
   }
 }
 
@@ -1530,6 +1605,30 @@ template {
   }
   .reviews__text {
     max-width: 80%;
+  }
+  .packages {
+    padding-top: 0;
+  }
+  .packages-title {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .packages__title {
+    margin-bottom: 40px;
+  }
+  .grid-description {
+    padding: 15px 15px;
+    -ms-grid-rows: 30px 80px 20px 35px;
+        grid-template-rows: 30px 80px 20px 35px;
+  }
+  .grid-description__title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .grid-description__button {
+    right: 0;
+    -webkit-transform: translateX(-40%);
+            transform: translateX(-40%);
   }
   .activities {
     padding-top: 40px;
