@@ -1,0 +1,122 @@
+.packages 
+    padding-top: 40px
+    padding-bottom: 70px
+    &-title
+        font-weight: bold
+        margin: 0
+        font-size: 36px
+        line-height: 45px
+        text-align: center
+        text-transform: uppercase
+    &__title 
+        margin-bottom: 65px
+    &-grid 
+        display: grid
+        grid-template-columns: repeat(3, 350px)
+        grid-template-rows: repeat(2, 500px)
+        grid-gap: 30px
+        &__first 
+            grid-column: span 2        
+.hotel 
+    &-about 
+        width: 100%
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+        display: grid
+        grid-template-columns: 30px 1fr
+        grid-template-rows: repeat(3, 26px)
+.grid 
+    &-description 
+        position: relative
+        background-color: $dark
+        color: $text-white
+        padding: 30px 32px 25px 32px
+        display: grid
+        grid-template-columns: 100% 
+        grid-template-rows: 47px 95px 20px 35px
+        &__title 
+            font-weight: bold
+            font-size: 18px
+            line-height: 23px
+            margin: 0
+        &__text 
+            font-weight: normal
+            font-size: 14px
+            line-height: 160.6%
+            margin: 0        
+        &__old-price 
+            display: inline-block
+            font-weight: normal
+            font-size: 14px
+            line-height: 18px
+            text-decoration-line: line-through
+            width: 100%
+        &__actual-price 
+            font-style: normal
+            font-weight: bold
+            font-size: 24px
+            line-height: 30px
+        &__button 
+            font-family: 'Nunito', sans-serif
+            position: absolute
+            right: 25px
+            bottom: 21px
+            font-style: normal
+            font-weight: 600
+            font-size: 14px
+            line-height: 19px
+            color: $text-white
+            padding: 10px 26px
+            color: $text-white
+            background-color: $primary
+            border: none
+            border-radius: 4px
+    &-package 
+        border-radius: 8px
+        overflow: hidden
+        position: relative
+        &__image
+                width: 350px
+                height: 250px
+                object-fit: cover
+                &-large
+                    width: 366px
+                    height: 500px
+        &:not(:first-child)
+            object-fit: cover
+            display: grid
+            grid-template-columns: 100%
+            grid-template-rows: 50% 50%
+        &:first-child 
+            object-fit: cover
+            display: grid
+            grid-template-columns: 50% 50%
+            grid-template-rows: 100%
+        &__offer 
+            font-size: 8px
+            line-height: 10px
+            position: absolute
+            font-weight: 600
+            color: $text-white
+            padding: 4px 9px
+            background-color: $primary
+            border-radius: 3px
+            left: 0
+            top: 26px
+            &-large 
+                font-size: 10px
+                line-height: 13px
+                padding: 8px 12px
+                position: absolute
+                font-weight: 600
+                border-radius: 3px
+                color: $text-white
+                background-color: $primary
+                left: 0
+                top: 26px
+        &__first 
+            grid-template-rows: 20px 60px 200px 115px 20px 30px
+   
+
+        
