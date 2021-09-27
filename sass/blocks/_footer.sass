@@ -1,0 +1,121 @@
+.footer 
+    background-color: $dark
+    padding-top: 110px
+    &-wrapper 
+        display: grid
+        grid-template-columns: repeat(4, minmax(min-content, 1fr))
+        grid-gap: 23px
+        grid-auto-rows: minmax(60px, min-content)
+    &__logo 
+        width: 166px
+        grid-row: span 2
+        align-self: center
+    &__categories 
+        grid-row: span 3
+    &__title 
+        color: $text-white
+        font-weight: bold
+        font-size: 18px
+        line-height: 23px
+        text-transform: uppercase
+        margin: 0 0 16px 0
+        &--mr-4 
+            margin: 0
+            margin-right: 40px
+    &__list 
+        margin: 0
+        padding: 0
+    &__item 
+        list-style: none
+        color: $footer-text
+        display: flex
+        align-items: flex-start
+        &--mb-2 
+            margin-bottom: 20px
+    &__link 
+        color: $footer-text
+        text-decoration: none
+        font-weight: normal
+        font-size: 14px
+        line-height: 160%
+        &--small 
+            font-weight: normal
+            font-size: 12px
+            line-height: 15px
+    &__text 
+        color: $footer-text
+        margin: 0
+        margin-bottom: 22px
+    &__info 
+        color: $footer-text
+    &__social-network 
+        grid-row: 2 / 4
+        grid-column: 3 / 5
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+    &__social-contacts 
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        width: 85px
+    &__contacts 
+        grid-column: span 2
+    &__icon-wrapper 
+        min-width: 40px
+    &__message 
+        grid-column: span 2
+    &__form 
+        display: flex 
+        align-items: center
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: 95px
+    &__input 
+        flex-basis: 48%
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+        color: $footer-text
+        padding: 18px 23px
+        border-radius: 4px
+        border: none
+        margin-bottom: 15px
+    &__textarea 
+        flex-basis: 100%
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+        color: $footer-text
+        padding: 18px 23px
+        border-radius: 4px
+        border: none
+        margin-bottom: 22px
+        resize: none
+    &__button 
+        font-weight: bold
+        font-size: 12px
+        line-height: 15px
+        color: $text-white
+        background-color: $primary 
+        padding: 18px 66px
+        border-radius: 4px
+        border: none
+    &__info
+        font-weight: bold
+        font-size: 12px
+        line-height: 15px
+        color: #E0E0E0
+    &__add
+        grid-column: 2 / 4
+    &__additional-list
+        max-width: 283px
+        margin: 0
+        padding: 0
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__payment 
+        width: 136px
