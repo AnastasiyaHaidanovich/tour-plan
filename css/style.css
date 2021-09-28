@@ -1934,6 +1934,9 @@ template {
   .slider__slider {
     margin-bottom: 20px;
   }
+  .navbar__search {
+    width: 245px;
+  }
   .newsletter-title {
     font-size: 20px;
     line-height: 25px;
