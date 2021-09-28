@@ -419,6 +419,10 @@ template {
   font-weight: bold;
 }
 
+.navbar-menu__item_visible {
+  display: none;
+}
+
 .navbar-menu__link {
   color: #ffffff;
   text-decoration: none;
@@ -1630,14 +1634,86 @@ template {
     max-width: 576px;
     width: 92%;
   }
-  .navbar-menu, .navbar__search, .navbar__user {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .navbar__search_hidden, .navbar__user_hidden {
     display: none;
+  }
+  .navbar__user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 27px;
+  }
+  .navbar-bottom {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .navbar-bottom__visible {
+    display: block;
+  }
+  .navbar__search {
+    margin-bottom: 40px;
   }
   .navbar-top__menu-button {
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .navbar-menu__item {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .navbar-menu__item_visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    text-transform: none;
+  }
+  .navbar-menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .user__name {
+    color: #ffffff;
+    margin: 0;
+  }
+  .user__avatar {
+    margin-bottom: 10px;
+  }
+  .breadcrumb {
+    padding-top: 70px;
   }
   .menu-button {
     border: none;

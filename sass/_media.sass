@@ -79,12 +79,56 @@
         max-width: 576px
         width: 92%
     .navbar 
-        &-menu, &__search, &__user
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        z-index: 99
+        &__search, &__user
+            &_hidden
+                display: none
+        &__user 
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            margin-top: 30px            
+            margin-bottom: 27px
+        &-bottom 
             display: none
+            position: fixed
+            top: 70px
+            left: 0
+            right: 0
+            bottom: 0
+            &__visible 
+                display: block
+        &__search 
+            margin-bottom: 40px
         &-top 
             &__menu-button 
                 padding: 0
                 display: flex
+        &-menu 
+            &__item 
+                padding: 0
+                padding-bottom: 20px
+                &_visible 
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    padding: 0
+                    text-transform: none
+            &__list 
+                flex-direction: column
+                justify-content: flex-start
+    .user 
+        &__name
+            color: $text-white
+            margin: 0
+        &__avatar 
+            margin-bottom: 10px
+    .breadcrumb 
+        padding-top: 70px
     .menu 
         &-button 
             border: none
