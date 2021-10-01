@@ -1113,7 +1113,7 @@ template {
   margin-bottom: 70px;
 }
 
-.reviews__mb_7 {
+.reviews__mb-7 {
   margin-bottom: 70px;
 }
 
@@ -1528,6 +1528,116 @@ template {
 
 .footer__payment {
   width: 136px;
+}
+
+.modal-overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 143, 223, 0.39);
+  z-index: 99;
+}
+
+.modal-overlay__visible {
+  visibility: visible;
+}
+
+.modal-dialog {
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 478px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #0A223D;
+  border-radius: 8px;
+  z-index: 100;
+  padding: 33px 88px;
+}
+
+.modal-dialog__visible {
+  visibility: visible;
+}
+
+.modal-dialog__title {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+}
+
+.modal-dialog__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-dialog__input {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #bdbdbd;
+  padding: 18px 23px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.modal-dialog__textarea {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #bdbdbd;
+  padding: 18px 23px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 15px;
+  resize: none;
+}
+
+.modal-dialog__button {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  background-color: #EC1F46;
+  padding: 18px 66px;
+  border-radius: 4px;
+  border: none;
+}
+
+.modal-dialog__info {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #E0E0E0;
+}
+
+.modal-dialog__close {
+  position: fixed;
+  top: 18px;
+  right: 18px;
 }
 
 @media (max-width: 1200px) {

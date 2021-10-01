@@ -189,7 +189,7 @@
                                 <!-- /.booking__phone -->
                             </div>
                             <!-- /.booking__call-center -->
-                            <button class="button booking__button">View Other Options</button>
+                            <button data-toggle="modal" class="button booking__button">View Other Options</button>
                         </div>
                         <!-- /.booking -->
                         <div class="map" id="map"></div>
@@ -570,6 +570,24 @@
         </div>
         <!-- /.container -->
     </footer>
+    <div class="modal-overlay">
+    </div>
+    <!-- /.modal-overlay -->
+    <div class="modal-dialog">
+        <a href="#" class="modal-dialog__close">
+            <img src="img/close.svg" alt="Icon: close">
+        </a>
+        <h3 class="modal-dialog__title">Booking</h3>
+        <form action="send.php" method="POST" class="modal-dialog__form">
+            <input type="text" name="name" class="input modal-dialog__input" required placeholder="Your Full Name*">
+            <input type="text" name="phone" class="input modal-dialog__input" required placeholder="Phone Number*">
+            <input type="text" name="email" class="modal-dialog__input" required placeholder="Your email address*">
+            <textarea cols="30" rows="5" name="message" class="modal-dialog__textarea" placeholder="Message"></textarea>
+            <button class="button modal-dialog__button">Send</button>
+            <span class="modal-dialog__info">* Required Fields</span>
+        </form>
+    </div>
+    <!-- /.modal-dialog -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>

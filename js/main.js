@@ -1,4 +1,5 @@
-const hotelSwiper = new Swiper('.hotel-swiper', {
+$(document).ready(function () {
+  const hotelSwiper = new Swiper('.hotel-swiper', {
     // Optional parameters
     loop: true,
     effect: 'fade',
@@ -68,3 +69,25 @@ myMap.geoObjects
   menuButton.addEventListener('click', function () {
     document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom__visible");
   })
+
+  var modalButton = $('[data-toggle=modal]');
+  var closeModalButton = $('.modal-dialog__close');
+  modalButton.on('click', openModal);
+  closeModalButton.on('click', closeModal);
+
+  function openModal() {
+    var modalOverlay = $(".modal-overlay");
+    var modalDialog = $(".modal-dialog");
+    modalOverlay.addClass("modal-overlay__visible");
+    modalDialog.addClass("modal-dialog__visible");
+  }
+
+  function closeModal(event) {
+    event.preventDefault();
+    var modalOverlay = $(".modal-overlay");
+    var modalDialog = $(".modal-dialog");
+    modalOverlay.removeClass("modal-overlay__visible");
+    modalDialog.removeClass("modal-dialog__visible");
+  }
+
+});
