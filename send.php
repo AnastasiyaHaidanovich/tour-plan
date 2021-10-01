@@ -39,13 +39,13 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
     $mail->Username   = 'nastyal0ve9517@gmail.com'; // Логин на почте
-    $mail->Password   = 'здесь был пароль'; // Пароль на почте
+    $mail->Password   = 'Yfcnz19952009'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('nastyal0ve9517@gmail.com', 'Настя Линькова'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('anastasia.gaidanovich@yandex.by');  
+    $mail->addAddress('anastasiyahaidanovich@yandex.by');  
 
 // Отправка сообщения
 $mail->isHTML(true);
