@@ -229,7 +229,7 @@
                             <!-- /.grid-description__characteristics -->
                             <span class="grid-description__old-price">$ 10,500</span>
                             <span class="grid-description__actual-price">$ 8,500</span>
-                            <button class="button grid-description__button">Book Now</button>
+                            <button class="button grid-description__button" data-toggle="modal">Book Now</button>
                         </div>
                         <!-- /.grid-package__description -->
                         <span class="grid-package__offer-large">Flash Offer</span>
@@ -249,7 +249,7 @@
                             <!-- /.grid-description__characteristics -->
                             <span class="grid-description__old-price">$ 8,500</span>
                             <span class="grid-description__actual-price">$ 3,000</span>
-                            <button class="button grid-description__button">Book Now</button>
+                            <button class="button grid-description__button" data-toggle="modal">Book Now</button>
                         </div>
                         <!-- /.grid-package__description -->
                         <span class="grid-package__offer">Flash Offer</span>
@@ -269,7 +269,7 @@
                             <!-- /.grid-description__characteristics -->
                             <span class="grid-description__old-price">$ 10,500</span>
                             <span class="grid-description__actual-price">$ 9,500</span>
-                            <button class="button grid-description__button">Book Now</button>   
+                            <button class="button grid-description__button" data-toggle="modal">Book Now</button>   
                         </div>
                         <!-- /.grid-package__description -->
                         <span class="grid-package__offer">Flash Offer</span>
@@ -289,7 +289,7 @@
                             <!-- /.grid-description__characteristics -->
                             <span class="grid-description__old-price">$ 4,500</span>
                             <span class="grid-description__actual-price">$ 2,500</span>
-                            <button class="button grid-description__button">Book Now</button>
+                            <button class="button grid-description__button" data-toggle="modal">Book Now</button>
                         </div>
                         <!-- /.grid-package__description -->
                         <span class="grid-package__offer">Flash Offer</span>
@@ -309,7 +309,7 @@
                             <!-- /.grid-description__characteristics -->
                             <span class="grid-description__old-price">$ 6,500</span>
                             <span class="grid-description__actual-price">$ 3,500</span>
-                            <button class="button grid-description__button">Book Now</button>
+                            <button class="button grid-description__button" data-toggle="modal">Book Now</button>
                         </div>
                         <!-- /.grid-package__description -->
                         <span class="grid-package__offer">Flash Offer</span>
@@ -329,7 +329,7 @@
                 </h2>
                 <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
                     <input type="text" name="email" class="subscribe__input" placeholder="Your email address">
-                    <button class="subscribe__button">Send</button>
+                    <button class="subscribe__button" name="button-newsletter">Send</button>
                 </form>
             </div>
             <!-- /.newsletter-wrapper -->
@@ -435,25 +435,25 @@
                     <div class="card activities__card">
                         <h3 class="card__title">The curious corner of chamarel</h3>
                         <img src="img/activity-1.jpg" alt="The curious corner of chamarel" class="card__image">
-                        <button class="card__button">Book Now</button>
+                        <button class="card__button" data-toggle="modal">Book Now</button>
                     </div>
                     <!-- /.card -->
                     <div class="card activities__card">
                         <h3 class="card__title">Gymkhana club golf course</h3>
                         <img src="img/activity-2.jpg" alt="Gymkhana club golf course" class="card__image">
-                        <button class="card__button">Book Now</button>
+                        <button class="card__button" data-toggle="modal">Book Now</button>
                     </div>
                     <!-- /.card -->
                     <div class="card activities__card">
                         <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
                         <img src="img/activity-3.jpg" alt="Tamarind falls hiking trip - full day" class="card__image">
-                        <button class="card__button">Book Now</button>
+                        <button class="card__button" data-toggle="modal">Book Now</button>
                     </div>
                     <!-- /.card -->
                     <div class="card activities__card">
                         <h3 class="card__title">The blue marine discovery quest</h3>
                         <img src="img/activity-4.jpg" alt="The blue marine discovery quest" class="card__image">
-                        <button class="card__button">Book Now</button>
+                        <button class="card__button" data-toggle="modal">Book Now</button>
                     </div>
                     <!-- /.card -->
                 </div>
@@ -547,7 +547,7 @@
                         <input type="text" name="name" class="input footer__input" placeholder="Your Full Name*">
                         <input type="text" name="phone" class="input footer__input" placeholder="Phone Number*">
                         <textarea cols="30" rows="5" name="message" class="footer__textarea" placeholder="Message"></textarea>
-                        <button class="button footer__button">Send</button>
+                        <button class="button footer__button" name="button-footer">Send</button>
                         <span class="footer__info">* Required Fields</span>
                     </form>
                 </div>
@@ -583,7 +583,7 @@
             <input type="text" name="phone" class="input modal-dialog__input" required placeholder="Phone Number*">
             <input type="text" name="email" class="modal-dialog__input" required placeholder="Your email address*">
             <textarea cols="30" rows="5" name="message" class="modal-dialog__textarea" placeholder="Message"></textarea>
-            <button class="button modal-dialog__button">Send</button>
+            <button class="button modal-dialog__button" name="button-booking">Send</button>
             <span class="modal-dialog__info">* Required Fields</span>
         </form>
     </div>
