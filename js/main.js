@@ -70,6 +70,14 @@ myMap.geoObjects
     document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom__visible");
   })
 
+  function preventDefault(e) {
+    e = e || window.event;
+    if (e.preventDefault)
+        e.preventDefault();
+    e.returnValue = false;  
+  }
+  
+
   var modalButton = $('[data-toggle=modal]');
   var closeModalButton = $('.modal-dialog__close');
   modalButton.on('click', openModal);
@@ -83,9 +91,19 @@ myMap.geoObjects
     document.body.onkeydown = function(e){
       e = e || window.event;
       var c = e.keyCode;
-      if(c === 27) modalOverlay.removeClass("modal-overlay__visible") && modalDialog.removeClass("modal-dialog__visible");
+      if(c === 27) modalOverlay.removeClass("modal-overlay__visible") && 
+      modalDialog.removeClass("modal-dialog__visible");
       }
+
+      disable_scroll();
       
+      document.addEventListener("click", function (e) {
+        const wrap = e.target.classList.contains('modal-overlay__visible');
+        if(!wrap) return;
+        e.preventDefault();
+        modalOverlay.removeClass("modal-overlay__visible") && 
+      modalDialog.removeClass("modal-dialog__visible");
+    }.bind(this));
   }
 
   function closeModal(event) {

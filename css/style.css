@@ -1640,6 +1640,13 @@ template {
   right: 18px;
 }
 
+.hystmodal__opened {
+  position: fixed;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -2192,6 +2199,13 @@ template {
         align-self: end;
     margin-bottom: 10px;
   }
+  .modal-dialog {
+    max-width: 350px;
+    padding: 15px 30px;
+  }
+  .modal-dialog__button {
+    padding: 10px 30px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -2256,6 +2270,12 @@ template {
   }
   .footer__additional-list {
     width: 100%;
+  }
+  .modal-dialog {
+    max-width: 250px;
+  }
+  .modal-dialog__button {
+    padding: 7px 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
