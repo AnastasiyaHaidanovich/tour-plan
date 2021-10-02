@@ -1530,6 +1530,11 @@ template {
   width: 136px;
 }
 
+.body-scroll {
+  overflow: hidden;
+  padding-right: 19px;
+}
+
 .modal-overlay {
   visibility: hidden;
   position: fixed;

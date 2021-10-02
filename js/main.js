@@ -18,6 +18,8 @@ $(document).ready(function () {
     },    
   });
 
+  $('.parallax-window').parallax({imageSrc: '../img/newsletter-bg.jpg'});
+
   ymaps.ready(init);
   function init(){
       var myMap = new ymaps.Map("map", {
@@ -70,20 +72,13 @@ myMap.geoObjects
     document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom__visible");
   })
 
-  function preventDefault(e) {
-    e = e || window.event;
-    if (e.preventDefault)
-        e.preventDefault();
-    e.returnValue = false;  
-  }
-  
-
   var modalButton = $('[data-toggle=modal]');
   var closeModalButton = $('.modal-dialog__close');
   modalButton.on('click', openModal);
   closeModalButton.on('click', closeModal);
 
   function openModal() {
+    document.querySelector(".body").classList.add("body-scroll");
     var modalOverlay = $(".modal-overlay");
     var modalDialog = $(".modal-dialog");
     modalOverlay.addClass("modal-overlay__visible");
@@ -92,17 +87,17 @@ myMap.geoObjects
       e = e || window.event;
       var c = e.keyCode;
       if(c === 27) modalOverlay.removeClass("modal-overlay__visible") && 
-      modalDialog.removeClass("modal-dialog__visible");
+      modalDialog.removeClass("modal-dialog__visible") && 
+      document.querySelector(".body").classList.remove("body-scroll");
       }
-
-      disable_scroll();
       
       document.addEventListener("click", function (e) {
         const wrap = e.target.classList.contains('modal-overlay__visible');
         if(!wrap) return;
         e.preventDefault();
         modalOverlay.removeClass("modal-overlay__visible") && 
-      modalDialog.removeClass("modal-dialog__visible");
+      modalDialog.removeClass("modal-dialog__visible") && 
+      document.querySelector(".body").classList.remove("body-scroll");
     }.bind(this));
   }
 
@@ -112,6 +107,7 @@ myMap.geoObjects
     var modalDialog = $(".modal-dialog");
     modalOverlay.removeClass("modal-overlay__visible");
     modalDialog.removeClass("modal-dialog__visible");
+    document.querySelector(".body").classList.remove("body-scroll");
   }
   
 });
