@@ -13,7 +13,7 @@ $email = $_POST['email'];
 // Формирование самого письма
 $title = "Новое обращение Best Tour Plan";
 
-if ($email == true && $phone == true):
+if (isset($_POST['button-booking'])){
     $body = "
     <h2>Новое письмо</h2>
     <b>Имя:</b> $name<br>
@@ -21,19 +21,27 @@ if ($email == true && $phone == true):
     <b>Почта:</b> $email<br><br>
     <b>Сообщение:</b><br>$message
     ";
-elseif ($email == true):
+} else if (isset($_POST['button-newsletter'])){
     $body = "
     <h2>Новое письмо</h2>
     <b>Почта:</b> $email
     ";
-else:
+} else if (isset($_POST['button-footer'])){
     $body = "
     <h2>Новое письмо</h2>
     <b>Имя:</b> $name<br>
     <b>Телефон:</b> $phone<br><br>
     <b>Сообщение:</b><br>$message
     ";
-endif ;
+} else{
+    $body = "
+    <h2>Неизвестное обращение</h2><br>
+    $name<br>
+    $phone<br>
+    $message<br>
+    $email
+    ";
+};
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -50,10 +58,10 @@ try {
     $mail->Password   = 'Yfcnz19952009'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('nastyal0ve9517@gmail.com', 'Настя Линькова'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('nastyal0ve9517@gmail.com', 'Анастасия Гайданович'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('anastasiyahaidanovich@yandex.by');  
+    $mail->addAddress('anastasia.gaidanovich@yandex.by');  
 
 // Отправка сообщения
 $mail->isHTML(true);
@@ -71,4 +79,5 @@ else {$result = "error";}
 
 // Отображение результата
 header('Location: thankyou.html');
+exit;
 //echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
