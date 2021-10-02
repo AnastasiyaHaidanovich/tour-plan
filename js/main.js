@@ -80,6 +80,12 @@ myMap.geoObjects
     var modalDialog = $(".modal-dialog");
     modalOverlay.addClass("modal-overlay__visible");
     modalDialog.addClass("modal-dialog__visible");
+    document.body.onkeydown = function(e){
+      e = e || window.event;
+      var c = e.keyCode;
+      if(c === 27) modalOverlay.removeClass("modal-overlay__visible") && modalDialog.removeClass("modal-dialog__visible");
+      }
+      
   }
 
   function closeModal(event) {
@@ -89,5 +95,5 @@ myMap.geoObjects
     modalOverlay.removeClass("modal-overlay__visible");
     modalDialog.removeClass("modal-dialog__visible");
   }
-
+  
 });
