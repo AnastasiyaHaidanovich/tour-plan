@@ -113,8 +113,13 @@ myMap.geoObjects
   
   //Настройки валидации
 
+  $(document).ready(function(){
+    $('.phone').mask('+7 (000) 000-00-00');
+  }),
+
   $('.form').each(function () {
     
+
     $.validator.methods.phone = function( value, element ) {
       return this.optional( element ) || /\+7+ \([0-9][0-9][0-9]\) +[0-9][0-9][0-9]+\-+[0-9][0-9]+\-+[0-9][0-9]+/.test( value );
     }
