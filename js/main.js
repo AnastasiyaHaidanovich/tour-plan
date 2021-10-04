@@ -83,6 +83,7 @@ myMap.geoObjects
     var modalDialog = $(".modal-dialog");
     modalOverlay.addClass("modal-overlay__visible");
     modalDialog.addClass("modal-dialog__visible");
+
     document.body.onkeydown = function(e){
       e = e || window.event;
       var c = e.keyCode;
@@ -110,4 +111,46 @@ myMap.geoObjects
     document.querySelector(".body").classList.remove("body-scroll");
   }
   
+  //Настройки валидации
+
+  $('.form').each(function () {
+    
+    $.validator.methods.phone = function( value, element ) {
+      return this.optional( element ) || /\+7+ \([0-9][0-9][0-9]\) +[0-9][0-9][0-9]+\-+[0-9][0-9]+\-+[0-9][0-9]+/.test( value );
+    }
+
+    $.validator.methods.email = function( value, element ) {
+      return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+    }
+    $(this).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        phone: {
+          required: true,
+          phone: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Please, write your name",
+          minlength: jQuery.validator.format("At least 2 characters required!")
+        },
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+        phone: {
+          required: "Write your phone number",
+          phone: "Your phone should be like +7 (xxx) xxx-xx-xx"
+        }
+      }
+    });
+  });
 });

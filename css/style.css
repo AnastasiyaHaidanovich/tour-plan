@@ -22,6 +22,11 @@ button {
   cursor: pointer;
 }
 
+.error {
+  color: #EC1F46;
+  font-weight: bold;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1459,8 +1464,7 @@ template {
 }
 
 .footer__input {
-  -ms-flex-preferred-size: 48%;
-      flex-basis: 48%;
+  width: 100%;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -1469,6 +1473,11 @@ template {
   padding: 18px 23px;
   border-radius: 4px;
   border: none;
+}
+
+.footer__input-cover {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
   margin-bottom: 15px;
 }
 
@@ -1603,7 +1612,7 @@ template {
   padding: 18px 23px;
   border-radius: 4px;
   border: none;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal-dialog__textarea {
@@ -1617,7 +1626,7 @@ template {
   padding: 18px 23px;
   border-radius: 4px;
   border: none;
-  margin-bottom: 15px;
+  margin-top: 15px;
   resize: none;
 }
 
@@ -1627,6 +1636,7 @@ template {
   line-height: 15px;
   color: #ffffff;
   background-color: #EC1F46;
+  margin-top: 15px;
   padding: 18px 66px;
   border-radius: 4px;
   border: none;
@@ -1743,7 +1753,7 @@ template {
     width: 49%;
     height: 230px;
   }
-  .footer__input {
+  .footer__input-cover {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1983,7 +1993,7 @@ template {
   .footer__message {
     grid-column: span 5;
   }
-  .footer__input {
+  .footer__input-cover {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
   }
@@ -2183,7 +2193,7 @@ template {
     -ms-grid-column: 1;
     grid-column: 1;
   }
-  .footer__input {
+  .footer__input-cover {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
