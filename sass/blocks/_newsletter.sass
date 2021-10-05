@@ -33,12 +33,17 @@
             font-size: 36px
             line-height: 45px
             text-transform: uppercase
+    &__subscribe label 
+        position: absolute
+        top: -40px
+        left: 0
+        z-index: 1000
 .subscribe 
+    position: relative
     width: 350px
     min-height: 55px
     position: relative
-    border-radius: 4px 
-    overflow: hidden
+    z-index: 100
     &__input 
         position: absolute
         width: 100%
@@ -50,6 +55,7 @@
         line-height: 18px
         color: #BDBDBD
         border: none
+        border-radius: 4px
     &__button 
         position: absolute
         top: 0
@@ -64,3 +70,4 @@
         line-height: 15px
         color: $text-white
         word-wrap: wrap
+        border-radius: 0 4px 4px 0

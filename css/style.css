@@ -1064,12 +1064,19 @@ template {
   text-transform: uppercase;
 }
 
+.newsletter__subscribe label {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 1000;
+}
+
 .subscribe {
+  position: relative;
   width: 350px;
   min-height: 55px;
   position: relative;
-  border-radius: 4px;
-  overflow: hidden;
+  z-index: 100;
 }
 
 .subscribe__input {
@@ -1083,6 +1090,7 @@ template {
   line-height: 18px;
   color: #BDBDBD;
   border: none;
+  border-radius: 4px;
 }
 
 .subscribe__button {
@@ -1099,6 +1107,7 @@ template {
   line-height: 15px;
   color: #ffffff;
   word-wrap: wrap;
+  border-radius: 0 4px 4px 0;
 }
 
 .reviews {
@@ -1660,6 +1669,23 @@ template {
   right: 0;
   left: 0;
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  button:hover {
+    background-color: rgba(236, 31, 70, 0.9);
+  }
+  button:active {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+  a:active {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
 }
 
 @media (max-width: 1200px) {

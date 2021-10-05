@@ -158,4 +158,5 @@ myMap.geoObjects
       }
     });
   });
+  AOS.init();
 });
