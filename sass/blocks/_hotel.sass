@@ -7,7 +7,26 @@
         justify-content: space-between   
         padding-bottom: 20px
         &__name 
-            margin: 4px 14px 0 0        
+            margin: 4px 14px 0 0   
+        &__thankyou 
+            margin: 0 auto
+            display: flex
+            flex-direction: column
+            align-items: center 
+    &__stars 
+        margin-top: 3px
+        height: 8px
+    &__stars img 
+        margin-right: 2px
+    &-link 
+        display: inline-block
+        padding: 10px 20px
+        background-color: $primary
+        color: $text-white
+        border: none 
+        border-radius: 4px
+        margin-top: 30px
+        text-decoration: none
     &-name 
         font-weight: bold
         font-size: 24px
@@ -64,6 +83,8 @@
             height: 100%
             background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
 .stars 
+    display: flex 
+    align-items: flex-start
     flex-basis: 100%
 .offer 
     font-weight: 600

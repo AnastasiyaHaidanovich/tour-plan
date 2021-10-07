@@ -58,7 +58,7 @@ try {
     $mail->Password   = 'Yfcnz19952009'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('nastyal0ve9517@gmail.com', 'Анастасия Гайданович'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('nastyal0ve9517@gmail.com', 'Настя Линькова'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('anastasia.gaidanovich@yandex.by');  

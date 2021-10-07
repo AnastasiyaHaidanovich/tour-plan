@@ -5,7 +5,7 @@
         display: grid
         grid-template-columns: repeat(4, minmax(min-content, 1fr))
         grid-gap: 23px
-        grid-auto-rows: minmax(60px, min-content)
+        grid-auto-rows: minmax(40px, min-content)
     &__logo 
         width: 166px
         grid-row: span 2
@@ -32,6 +32,16 @@
         align-items: flex-start
         &--mb-2 
             margin-bottom: 20px
+    &__tel 
+        text-decoration: none
+        font-size: 14px
+        color: inherit
+    &__email 
+        text-decoration: none
+        font-size: 14px
+        color: inherit
+    &__address 
+        font-size: 14px
     &__link 
         color: $footer-text
         text-decoration: none
@@ -43,6 +53,7 @@
             font-size: 12px
             line-height: 15px
     &__text 
+        font-size: 14px
         color: $footer-text
         margin: 0
         margin-bottom: 22px

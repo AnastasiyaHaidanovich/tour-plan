@@ -20,32 +20,32 @@ $(document).ready(function () {
 
   $('.parallax-window').parallax({imageSrc: '../img/newsletter-bg.jpg'});
 
-  ymaps.ready(init);
-  function init(){
-      var myMap = new ymaps.Map("map", {
-          center: [52.34654597, 4.83099345],
-          zoom: 15
-      });
-      myGeoObject = new ymaps.GeoObject({
-        // Описание геометрии.
-        geometry: {
-            type: "Point",
-            coordinates: [52.34654597, 4.83099345]
-        },
-        // Свойства.
-        properties: {
-            // Контент метки.
-            iconContent: 'Grand Hilton Hotel'
-        }
-    }, {
-        // Опции.
-        // Иконка метки будет растягиваться под размер ее содержимого.
-        preset: 'islands#redStretchyIcon',
-    });
+//   ymaps.ready(init);
+//   function init(){
+//       var myMap = new ymaps.Map("map", {
+//           center: [52.34654597, 4.83099345],
+//           zoom: 15
+//       });
+//       myGeoObject = new ymaps.GeoObject({
+//         // Описание геометрии.
+//         geometry: {
+//             type: "Point",
+//             coordinates: [52.34654597, 4.83099345]
+//         },
+//         // Свойства.
+//         properties: {
+//             // Контент метки.
+//             iconContent: 'Grand Hilton Hotel'
+//         }
+//     }, {
+//         // Опции.
+//         // Иконка метки будет растягиваться под размер ее содержимого.
+//         preset: 'islands#redStretchyIcon',
+//     });
 
-myMap.geoObjects
-    .add(myGeoObject)
-}
+// myMap.geoObjects
+//     .add(myGeoObject)
+// }
 
   const reviewsSwiper = new Swiper('.reviews-swiper', {
     // Optional parameters
@@ -70,6 +70,7 @@ myMap.geoObjects
 
   menuButton.addEventListener('click', function () {
     document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom__visible");
+    document.querySelector(".body").classList.toggle("body-scroll");
   })
 
   var modalButton = $('[data-toggle=modal]');

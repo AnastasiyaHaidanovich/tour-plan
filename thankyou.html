@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
     <!--font-family: 'Luckiest Guy', cursive;
     font-family: 'Mulish', sans-serif;
@@ -31,7 +33,7 @@
                     </button>
                 </form>
                 <a href="#" class="user navbar__user navbar__user_hidden">
-                    <img src="img/user-avatar.jpg" alt="avatar: Nathan" class="user__avatar">
+                    <img src="img/user-avatar.webp" alt="avatar: Nathan" class="user__avatar">
                     <span class="user__name">Nathan</span>
                 </a>
                 <button class="menu-button navbar-top__menu-button">
@@ -49,7 +51,7 @@
                     <ul class="navbar-menu__list">
                         <li class="navbar-menu__item navbar-menu__item_visible">
                             <a href="#" class="user navbar__user">
-                                <img src="img/user-avatar.jpg" alt="avatar: Nathan" class="user__avatar">
+                                <img src="img/user-avatar.webp" alt="avatar: Nathan" class="user__avatar">
                                 <span class="user__name">Nathan</span>
                             </a> 
                         </li>
@@ -102,9 +104,11 @@
         <section class="hotel">
             <div class="container">
                 <div class="hotel-info">
-                    <div class="hotel-info__text">
-                            <h1 class="hotel-name hotel-info__name">Thank You!</h1><br>
+                    <div class="hotel-info__thankyou">
+                            <h1 class="visually-hidden">Thank You page</h1>
+                            <h2 class="hotel-name hotel-info__name">Thank You!</h2><br>
                             <p class="hotel-description">Our manager will call You in 10 minutes.</p>  
+                            <a href="index.html" class="hotel-link">Main page</a>
                      </div>
                     <!-- /.hotel-info__text -->
                 </div>
@@ -171,35 +175,43 @@
                     <ul class="footer__list">
                         <li class="footer__item footer__item--mb-2">
                             <div class="footer__icon-wrapper">
-                                <img src="img/map-pin.svg" alt="Icon: map-pin" class="footer__icon">
+                                <img src="img/map-pin.svg" width="14" height="14" alt="Icon: map-pin" class="footer__icon">
                             </div>
-                            9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States
+                            <span class="footer__address">9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States</span>
                         </li>
                         <li class="footer__item footer__item--mb-2">
                             <div class="footer__icon-wrapper">
-                                <img src="img/phone-call.svg" alt="Icon: phone" class="footer__icon">
+                                <img src="img/phone-call.svg" width="14" height="14" alt="Icon: phone" class="footer__icon">
                             </div>
-                            Tel (business hours) : 269 1500
-                            Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)
-                            Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
-
+                            <div class="footer__tel-wrapper">
+                                <span class="footer__tel">Tel (business hours): </span><a href="tel:2691500" class="footer__tel">269 1500</a> <br>
+                                <span class="footer__tel">Tel (hotline) Monday - Saturday: </span><a href="tel:52566138" class="footer__tel">52-56-61-38</a><span class="footer__tel">(08:00 am – 20:00 pm)</span><br>
+                                <span class="footer__tel">Tel (hotline) Sunday: </span><a href="tel:52566138" class="footer__tel">52-56-61-38</a><span class="footer__tel">(08:00 am – 14:00 pm)</span> 
+                            </div>
+                            <!-- /.footer__tel-wrapper -->
                         </li>
                         <li class="footer__item footer__item--mb-2">
                             <div class="footer__icon-wrapper">
-                                <img src="img/email.svg" alt="Icon: mail" class="footer__icon">
+                                <img src="img/email.svg" width="20" height="20" alt="Icon: mail" class="footer__icon">
                             </div>
-                            cherly.lawson@example.com
+                            <a href="mailto:cherly.lawson@example.com" class="footer__email">cherly.lawson@example.com</a>
                         </li>
                     </ul>
                 </div>
                 <!--/.footer__contacts-->
                 <div class="footer__message">
                     <h3 class="footer__title">Send us a message</h3>
-                    <form action="send.php" method="POST" class="footer__form">
-                        <input type="text" name="name" class="input footer__input" placeholder="Your Full Name*">
-                        <input type="text" name="phone" class="input footer__input" placeholder="Phone Number*">
+                    <form action="send.php" method="POST" class="form footer__form">
+                        <div class="footer__input-cover">
+                            <input type="text" name="name" class="input footer__input" required placeholder="Your Full Name*">
+                        </div>
+                        <!-- /.footer__input-cover -->
+                        <div class="footer__input-cover">
+                            <input type="tel" data-mask="+7 (000) 000-00-00" name="phone" class="input footer__input" required placeholder="Phone Number*">
+                        </div>
+                        <!-- /.footer__input-cover -->
                         <textarea cols="30" rows="5" name="message" class="footer__textarea" placeholder="Message"></textarea>
-                        <button class="button footer__button">Send</button>
+                        <button class="button footer__button" name="button-footer">Send</button>
                         <span class="footer__info">* Required Fields</span>
                     </form>
                 </div>
