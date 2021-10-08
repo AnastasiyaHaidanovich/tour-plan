@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 // Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
@@ -50,16 +49,16 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
+    $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'nastyal0ve9517@gmail.com'; // Логин на почте
-    $mail->Password   = 'Yfcnz19952009'; // Пароль на почте
+    $mail->Username   = 'anastasiya.gaidanovich@gmail.com'; // Логин на почте
+    $mail->Password   = 'Ufql9900cool'; // Пароль на почте 
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('nastyal0ve9517@gmail.com', 'Настя Линькова'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('anastasiya.gaidanovich@gmail.com', 'Настя Гайданович'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('anastasia.gaidanovich@yandex.by');  
@@ -83,4 +82,4 @@ else {$result = "error";}
 header('Location: thankyou.html');
 exit;
 
-//echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+// echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
