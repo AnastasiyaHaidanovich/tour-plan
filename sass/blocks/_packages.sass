@@ -28,13 +28,12 @@
         grid-template-rows: repeat(3, 26px)
 .grid 
     &-description 
-        position: relative
         background-color: $dark
         color: $text-white
         padding: 30px 32px 25px 32px
         display: grid
         grid-template-columns: 100% 
-        grid-template-rows: 47px 95px 20px 35px
+        grid-template-rows: 47px 95px 60px
         &__title 
             font-weight: bold
             font-size: 18px
@@ -61,9 +60,6 @@
             line-height: 30px
         &__button 
             font-family: 'Nunito', sans-serif
-            position: absolute
-            right: 20px
-            bottom: 30px
             font-style: normal
             font-weight: 600
             font-size: 14px
@@ -80,6 +76,11 @@
             height: 8px
         &__rating img 
             margin-right: 2px
+        &__price 
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-wrap: wrap
     &-package 
         border-radius: 8px
         max-height: 500px
@@ -126,7 +127,7 @@
                 top: 26px
         &__first 
             padding: 46px 21px 30px 44px
-            grid-template-rows: 10px 55px 195px 105px 22px 30px
+            grid-template-rows: 10px 55px 195px 105px 58px
    
 
         

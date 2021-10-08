@@ -1,3 +1,8 @@
+@media (orientation:landscape)
+.navbar 
+    &-bottom
+        &__visible 
+            overflow: auto
 @media (min-width:992px)
     button 
         &:hover
@@ -117,7 +122,6 @@
             bottom: 0
             &__visible 
                 display: block
-                overflow: auto
         &__search 
             margin-bottom: 40px
         &-top 
@@ -137,7 +141,6 @@
             &__list 
                 flex-direction: column
                 justify-content: flex-start
-                height: 100vh
     .user 
         &__name
             color: $text-white
