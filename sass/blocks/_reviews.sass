@@ -13,6 +13,7 @@
         margin-bottom: 70px
     &-swiper
         &__item 
+            position: relative
             max-width: 731px
             margin: auto
             background-color: white
@@ -21,6 +22,15 @@
             flex-direction: column
             align-items: center
             padding-bottom: 30px
+        &__quotes 
+            position: absolute
+            z-index: 0
+        &__quotes-left 
+            left: 64px
+            top: 13px
+        &__quotes-right 
+            right: 60px
+            bottom: 115px
         &__button
             position: absolute
             width: 30px
@@ -75,4 +85,5 @@
         font-size: 12px
         line-height: 160%
         text-align: justify
+        z-index: 1
         
